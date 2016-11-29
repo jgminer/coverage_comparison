@@ -1,9 +1,10 @@
 dependencies:
   pre:
-    - pip install codecov coverage
+    - pip install codecov coverage codeclimate-test-reporter
 
 test:
   override:
     - coverage run run_tests.py
   post:
     - bash <(curl -s https://codecov.io/bash)
+    - codeclimate-test-reporter
