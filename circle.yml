@@ -4,6 +4,6 @@ dependencies:
 
 test:
   override:
-    - coverage run_tests.py
+    - coverage run run_tests.py
   post:
     - bash <(curl -s https://codecov.io/bash)
