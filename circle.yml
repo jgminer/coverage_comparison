@@ -1,3 +1,9 @@
+dependencies:
+  pre:
+    - pip install codecov coverage
+
 test:
+  override:
+    - coverage run_tests.py
   post:
     - bash <(curl -s https://codecov.io/bash)
